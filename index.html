@@ -141,8 +141,59 @@
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
             document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+            if (evt) {
+                evt.currentTarget.className += " active";
+            } else {
+                // When called on page load, find the button corresponding to the tabName and add 'active' class
+                const buttons = document.getElementsByClassName('tab-button');
+                for (i = 0; i < buttons.length; i++) {
+                    if (buttons[i].getAttribute('onclick').includes("'" + tabName + "'")) {
+                        buttons[i].className += " active";
+                        break;
+                    }
+                }
+            }
+            // Update the URL hash without triggering a page jump
+            history.pushState(null, null, '#' + tabName);
         }
+
+        // On page load, check for a hash in the URL and open the corresponding tab
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                // Find the button for the hash to simulate a click, but don't actually click
+                const tabButtons = document.getElementsByClassName('tab-button');
+                let correspondingButton = null;
+                for(let i = 0; i < tabButtons.length; i++) {
+                    if(tabButtons[i].getAttribute('onclick').includes("'" + hash + "'")) {
+                        correspondingButton = tabButtons[i];
+                        break;
+                    }
+                }
+                
+                if (correspondingButton) {
+                    // Deactivate all tabs first
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tab-content");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                        tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+                    }
+                    tablinks = document.getElementsByClassName("tab-button");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+
+                    // Activate the target tab
+                    document.getElementById(hash).style.display = "block";
+                    document.getElementById(hash).className += " active";
+                    correspondingButton.className += " active";
+                }
+            } else {
+                // Default to the first tab if no hash is present
+                document.getElementsByClassName('tab-button')[0].click();
+            }
+        });
     </script>
 </body>
 </html>
