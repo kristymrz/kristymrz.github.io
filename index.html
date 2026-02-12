@@ -26,33 +26,123 @@
             border: 1px solid #ccc; /* Placeholder visual */
             background-color: #f0f0f0; /* Placeholder background */
         }
+        .tab-container {
+            display: flex;
+            margin-top: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab-button {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab-button:hover {
+            background-color: #ddd;
+        }
+        .tab-button.active {
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <h1 class="portfolio-title">kristy's portfolio</h1>
     <p>under a lot of progress!!!</p>
     <h2>creative embedded systems - project work</h2>
-    <h3>assignment #1: soldering project - mr. heartman!</h3>
 
-    <div class="image-grid">
-        <img src="images/ces-1.JPG" alt="project image placeholder 1">
-        <img src="images/ces-2.JPG" alt="project image placeholder 2">
-        <img src="images/ces-3.JPG" alt="project image placeholder 3">
-        <img src="images/ces-4.JPG" alt="project image placeholder 4">
-        <img src="images/ces-5.JPG" alt="project image placeholder 5">
-        <img src="images/ces-6.JPG" alt="project image placeholder 6">
-        <img src="images/ces-7.JPG" alt="project image placeholder 7">
-        <img src="images/ces-8.JPG" alt="project image placeholder 8">
-        <img src="images/ces-9.JPG" alt="project image placeholder 9">
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab(event, 'mr-heartman')">mr.heartman</button>
+        <button class="tab-button" onclick="openTab(event, 'pcb-pendant')">pcb pendant</button>
     </div>
 
-    <p>the title of my piece is "mr. heartman". i chose this title because i was attempting to create a heart shape with my brass rod, 
-        but ultimately ended up playing with the rod too much to the point where the rod was genuinely unsalvagable. but rather 
-        than feel disappointed, i decided to embrace the awkward lines and unbendable rod and make the heart 
-        some shoes. i wanted this piece to reflect the love i have for my friends and my family (hence the awkwardly placed trinkets). 
-        however, by the end of the soldering process (my very first soldering project by the way), i want it to also represent the love 
-        i have for learning. learning how to solder reminded me that learning does not stop when you become a senior and secure a full-time job,
-        but that learning will always be a constant love in my life. so, hopefully mr. heartman will become the start of many paths of love for me! 
-        (btw: i hope you enjoy the mini photoshoot i had for him, i really tried bringing out whatever artistry i had left in me) </p>
+    <div id="mr-heartman" class="tab-content active">
+        <h3>assignment #1: soldering project - mr. heartman!</h3>
+        <div class="image-grid">
+            <img src="images/ces-1.JPG" alt="project image placeholder 1">
+            <img src="images/ces-2.JPG" alt="project image placeholder 2">
+            <img src="images/ces-3.JPG" alt="project image placeholder 3">
+            <img src="images/ces-4.JPG" alt="project image placeholder 4">
+            <img src="images/ces-5.JPG" alt="project image placeholder 5">
+            <img src="images/ces-6.JPG" alt="project image placeholder 6">
+            <img src="images/ces-7.JPG" alt="project image placeholder 7">
+            <img src="images/ces-8.JPG" alt="project image placeholder 8">
+            <img src="images/ces-9.JPG" alt="project image placeholder 9">
+        </div>
+        <p>the title of my piece is "mr. heartman". i chose this title because i was attempting to create a heart shape with my brass rod, 
+            but ultimately ended up playing with the rod too much to the point where the rod was genuinely unsalvagable. but rather 
+            than feel disappointed, i decided to embrace the awkward lines and unbendable rod and make the heart 
+            some shoes. i wanted this piece to reflect the love i have for my friends and my family (hence the awkwardly placed trinkets). 
+            however, by the end of the soldering process (my very first soldering project by the way), i want it to also represent the love 
+            i have for learning. learning how to solder reminded me that learning does not stop when you become a senior and secure a full-time job,
+            but that learning will always be a constant love in my life. so, hopefully mr. heartman will become the start of many paths of love for me! 
+            (btw: i hope you enjoy the mini photoshoot i had for him, i really tried bringing out whatever artistry i had left in me) </p>
+    </div>
+
+    <div id="pcb-pendant" class="tab-content">
+        <h3>assignment #2: pcb pendant - 'wandering' </h3>
+        
+        <h4>photos ⋆˚✿˖° </h4>
+        <div class="image-grid">
+            <img src="images/pcb-1.JPG" alt="pcb pendant image 1">
+            <img src="images/pcb-2.JPG" alt="pcb pendant image 2">
+            <img src="images/pcb-3.JPG" alt="pcb pendant image 3">
+            <img src="images/pcb-4.JPG" alt="pcb pendant image 4">
+            <img src="images/pcb-5.JPG" alt="pcb pendant image 5">
+            <img src="images/pcb-6.JPG" alt="pcb pendant image 6">
+            <img src="images/pcb-7.JPG" alt="pcb pendant image 7">
+            <img src="images/pcb-8.JPG" alt="pcb pendant image 8">
+            <img src="images/pcb-9.JPG" alt="pcb pendant image 9">
+        </div>
+
+        <h4>creative vision °❀⋆.ೃ࿔* </h4>
+        <p>the title of my second piece is ‘wandering’! i chose this title for a few reasons – the first one being that the shape of my piece is a 
+            cloud (i guess clouds wander in the sky?). i was looking out the window after class last thursday (2/5/26) and thought it would be a 
+            perfect shape for one of my first ever art pieces in the class. at the beginning of this project, i wanted this piece to represent the 
+            fact that my interests are allowed to wander in life, whether in art or computer science. 
+
+            however, by the end of the project, i think the name ‘wandering’ took on a different meaning. this piece let me wander through the joys and pains of 
+            trying things for the first time, including making mistakes and accepting them. for example, there is a small glob of solder to the left of my battery 
+            from when i tried (and failed) using a solder sucker for the first time. when this happened, i was legitimately heartbroken. i felt like my project 
+            was so ugly (lol) and that i failed at perfecting it first try. after getting over my initial (dramatic) emotions, i decided to look at my glob as 
+            proof of my immense effort to get my project to work. it symbolized the frustrating hour and a half it took to solder the battery holder and everything 
+            else (just for the holder to fall right off). i let go of the notion that a scratchless, solder-less board was the goal of the project, and decided to 
+            leap right in and sandpaper the entire thing (hence the massive scratches all over). to me, this project reminds me of how effort is more important 
+            than perfection (very corny i know), and that all that matters is that im finally starting to create something new!! ٩(｡•́‿•̀｡)۶
+        </p>
+
+        <h4>more details ˚ ༘ ೀ⋆｡˚ </h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NXpescVuyqc?si=7Np3q28n8rI4lSCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>technical details found here on github . ݁₊ ⊹ . ݁˖ . ݁.☘︎ ݁˖: <a href="https://github.com/kristymrz/ces_pcb_pendant" target="_blank">https://github.com/kristymrz/ces_pcb_pendant</a></p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>
