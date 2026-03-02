@@ -67,6 +67,7 @@
     <div class="tab-container">
         <button class="tab-button active" onclick="openTab(event, 'mr-heartman')">mr.heartman</button>
         <button class="tab-button" onclick="openTab(event, 'pcb-pendant')">pcb pendant</button>
+        <button class="tab-button" onclick="openTab(event, 'who-am-i')">who am i?</button>
     </div>
 
     <div id="mr-heartman" class="tab-content active">
@@ -127,6 +128,39 @@
         <h4>more details ˚ ༘ ೀ⋆｡˚ </h4>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/NXpescVuyqc?si=7Np3q28n8rI4lSCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>technical details found here on github . ݁₊ ⊹ . ݁˖ . ݁.☘︎ ݁˖: <a href="https://github.com/kristymrz/ces_pcb_pendant" target="_blank">https://github.com/kristymrz/ces_pcb_pendant</a></p>
+    </div>
+
+    <div id="who-am-i" class="tab-content">
+        <h3>assignment #3: who am i?</h3>
+        
+        <h4>photos . ݁₊ ⊹ . ݁˖ . ݁.☘︎ ݁˖ </h4>
+        <div class="image-grid">
+            <img src="images/wai-1.JPG" alt="assignment 3 image 1">
+            <img src="images/wai-2.JPG" alt="assignment 3 image 2">
+            <img src="images/wai-3.JPG" alt="assignment 3 image 3">
+            <img src="images/wai-4.JPG" alt="assignment 3 image 4">
+            <img src="images/wai-5.JPG" alt="assignment 3 image 5">
+            <img src="images/wai-6.JPG" alt="assignment 3 image 6">
+        </div>
+
+        <h4>creative vision ｡ ﾟ ꒰ঌ ✦໒꒱ ༘*.ﾟ </h4>
+        <p>
+            the title of my third piece would be "who am i?". i was brainstorming the vision behind this piece when i was going through a bit of a crisis about 
+            graduating - am i who i wanted to be 4 years ago? am i kind? am i confident? after learning about generative art in class and how 'randomness' plays 
+            a key role, i was reminded of how chaotic thinking about yourself is. you have so many thoughts coming in at once, and you start to question everything 
+            around you at hyperspeed. because the display screen was so small, i wanted to make an impact on whoever sees my art installation with something that made 
+            them think. this line of reasoning led to this existential / questioning / thinking piece, which was further solidifed when i started playing with randomness
+            on my ESP32. the first iteration of my project would just be moving words across the screen, which reminded me of how thoughts come and go inside my mind. 
+            once i made the decision to follow my vision, i made it so my piece randomly alternates between questions and shifts the answers on and off the screen. in terms
+            of technical challenges when developing with my hardware, i had difficulty with the question & word transitions and orchestrating "shared word" persistence, 
+            which required mapping identical strings between questions and calculating precise paths so persistent words shift smoothly to new coordinates while 
+            others animate around them. 
+        </p>
+
+        <h4> installation video + more detailed video of art ˚ ༘ ೀ⋆｡˚ </h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-sV30fnT4aY?si=7lPRHLZ2es2IKdIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EN_KWDgtEZI?si=kJv2fKq89lSsgV08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>technical details found here on github °❀⋆.ೃ࿔*:･: <a href="https://github.com/kristymrz/ces-generative-art-installation#" target="_blank">https://github.com/kristymrz/ces-generative-art-installation#</a></p>
     </div>
 
     <script>
