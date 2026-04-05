@@ -57,6 +57,24 @@
         .tab-content.active {
             display: block;
         }
+        .msm-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .msm-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+        .msm-grid img:nth-child(1) {
+            grid-row: span 2;
+        }
+        .msm-grid img:nth-child(9) {
+            grid-column: 2;
+        }
     </style>
 </head>
 <body>
@@ -68,6 +86,7 @@
         <button class="tab-button active" onclick="openTab(event, 'mr-heartman')">mr.heartman</button>
         <button class="tab-button" onclick="openTab(event, 'pcb-pendant')">pcb pendant</button>
         <button class="tab-button" onclick="openTab(event, 'who-am-i')">who am i?</button>
+        <button class="tab-button" onclick="openTab(event, 'assignment-4')">my singing tree</button>
     </div>
 
     <div id="mr-heartman" class="tab-content active">
@@ -161,6 +180,48 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/-sV30fnT4aY?si=7lPRHLZ2es2IKdIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/EN_KWDgtEZI?si=kJv2fKq89lSsgV08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>technical details found here on github °❀⋆.ೃ࿔*:･: <a href="https://github.com/kristymrz/ces-generative-art-installation#" target="_blank">https://github.com/kristymrz/ces-generative-art-installation#</a></p>
+    </div>
+
+    <div id="assignment-4" class="tab-content">
+        <h3>assignment #4: my singing tree </h3>
+        
+        <h4>photos ⋆˚✿˖° </h4>
+        <div class="msm-grid">
+            <img src="images/msm-1.JPG" alt="msm vertical image 1">
+            <img src="images/msm-2.JPG" alt="msm image 2">
+            <img src="images/msm-3.JPG" alt="msm image 3">
+            <img src="images/msm-4.JPG" alt="msm image 4">
+            <img src="images/msm-5.JPG" alt="msm image 5">
+            <img src="images/msm-6.JPG" alt="msm image 6">
+            <img src="images/msm-7.JPG" alt="msm image 7">
+            <img src="images/msm-8.JPG" alt="msm image 8">
+            <img src="images/msm-9.JPG" alt="msm image 9">
+        </div>
+
+        <h4>creative vision °❀⋆.ೃ࿔* </h4>
+        <p>the title of my fourth piece would be "my singing tree", and it's probably my favorite project out of the 
+           4 assignments so far. the vision behind this tree came about pretty close to the deadline, and i only
+           thought about it when i was bored on my phone. at first, my vision was to create a physical model of a
+           tree accompanied by a virtual one - whenever a user would tap on a branch, an apple would fall or a branch
+           would get cut off. i liked this idea, but i honestly didn't really want to do anything visual for this 
+           project (i much preferred playing around with sound!). about a week before this project was due (sorry Professor),
+           i was talking to my friend at dinner and started playing around with games on my phone to show her how little storage
+           i have. i opened my singing monsters (a game where monsters quite literally just sing lol) and immediately 
+           thought of the idea about bringing the song interface on the app to life. even though the game doesn't really
+           relate to trees (although it does have a plant island!), i decided to make my project a physical 'my singing monsters' 
+           music mixer so i could play with the game sounds physically. one decision i took during this project was that
+           rather than using copper tape, i would be using brass rods. the use of brass rods in general was originally 
+           an idea from Professor Santolucito, and i saw the vision in using them for my trunks or branches. i created my 
+           physical model using wooden sticks and cardboard, and 3d printed the tree base for more stability. overall,
+           i would say the biggest headache in this assignment was connecting the brass rods to the wires, and then the wires
+           to the hidden breadboard at the bottom of the structure. the wires were either too long or too short, and they
+           would ALWAYS disconnect from the breadboard. this tree took a lot of blood, sweat, and frustration, but it turned
+           out so good!!!  </p>
+
+        <h4>video ˚ ༘ ೀ⋆｡˚ </h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/e0x7h7DshHw?si=AFDuy8dp-hNsVdm3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h4>github ˚ ༘ ೀ⋆｡˚ </h4>
+        <p>technical details found here on github . ݁₊ ⊹ . ݁˖ . ݁.☘︎ ݁˖: <a href="https://github.com/kristymrz/msm_tree_project" target="_blank">https://github.com/kristymrz/msm_tree_project</a></p>
     </div>
 
     <script>
